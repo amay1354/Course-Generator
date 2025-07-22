@@ -1,0 +1,49 @@
+
+structure_course:
+  description: >
+    Organize the ingested content into a structured course with modules and lessons.
+  expected_output: >
+    A structured outline of the course with module titles, lesson titles, and short descriptions.
+  agent: content_structurer
+
+generate_objectives:
+  description: >
+    Based on each module and lesson, create SMART learning objectives.
+  expected_output: >
+    A list of clear, measurable learning objectives for each lesson or module.
+  agent: objective_generator
+
+generate_quiz:
+  description: >
+    Create a pool of 50 quiz questions aligned with the learning objectives.
+  expected_output: >
+    A list of 50 quiz questions categorized by lesson/module and question type.
+  agent: quiz_generator
+
+compose_quiz_sets:
+  description: >
+    Create 10 quiz sets, each containing 20 randomly selected questions from the 50-question pool.
+  expected_output: >
+    10 unique quiz sets formatted and labeled appropriately.
+  agent: quiz_composer
+
+# review_course:
+#   description: >
+#     Review an existing course for outdated, redundant, or missing content and flag issues.
+#   expected_output: >
+#     A detailed review report listing outdated content, missing sections, and suggestions for improvement.
+#   agent: course_reviewer
+
+# audit_quizzes:
+#   description: >
+#     Evaluate the existing quiz questions for accuracy, relevance, and alignment with learning objectives.
+#   expected_output: >
+#     A categorized report showing which quiz questions are valid, outdated, or redundant.
+#   agent: quiz_auditor
+
+# update_course_content:
+#   description: >
+#     Replace outdated or redundant content, add missing topics or enrich content where required.
+#   expected_output: >
+#     Updated versions of the course modules and lessons, clearly marked as new or modified.
+#   agent: content_updater
